@@ -11,7 +11,11 @@ We are interested in the domain of global health security because as we are curr
 
 ## Global Health Security Data
 ### GHS Index - 2019 to Present
-The [Global Health Security Index](https://www.ghsindex.org/wp-content/uploads/2021/12/2021_GHSindexFullReport_Final.pdf) (GHS) 
+The [Global Health Security Index](https://www.ghsindex.org/wp-content/uploads/2021/12/2021_GHSindexFullReport_Final.pdf) (GHS) is an organization responsible for creating all of the index scores for each country. Research is conducted through the Economist Impact where several qualitative assessments are made through publicly available information about each country and through existing quantitative datasets using a multidimensional analytical framework. There are 390 observations and x features in the dataset. Using this dataset, all three questions can be answered.
 
+### Country ranking and score based on the Global Health Survey index - 2020
+Provided by Plos One, this [dataset](https://plos.figshare.com/articles/dataset/Country_ranking_and_score_based_on_the_Global_Health_Survey_index_/13062161/1) is created by several researchers from different universities, designed to help countries see how prepared they would be for another pandemic based on different scores from 0 to 100. The ranking for each feature is also given for each country. There are 35 observations and 8 features in this dataset. Only questions 1 and 2 can be answered using this dataset.  
 
+#### COVID-19 Pandemic and Global Health Security Index - 2020
+Using the GHS Index and other sources from the Center for Systems Science and Engineering at JHU, this [dataset](https://knoema.com/ychqncc/the-global-health-security-ghs-index) from Knoema allows you to visualize the data given by the GHS index into many different graphs. There are 194 observations (countries) and 7 features (indicators), allowing you to precisely select specific countries that you would like to gain more information on.
 
