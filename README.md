@@ -3,6 +3,11 @@
 We are interested in the domain of global health security because as we are currently experiencing a pandemic, it is important for countries to be more readily prepared for other infectious disease outbreaks in the future. When the pandemic first started, Covid-19 had a large impact on the world both socially and economically. Many people in the workforce lost their jobs, borders closed, businesses closed, and much more. Here, we would like to visualize and identify countries with low security indexes to inform ourselves and eventually develop ways to help improve their benchmarks.
 
 ## What other examples of data driven project have you found related to this domain (share  **at least 3**)?
+[GHS Index](https://www.ghsindex.org/), is a project driven by the Nuclear Threat Initiative (NTI), the Johns Hopkins Center for Health Security, and Economist Impact. Through different visualizations, users can find the overall GHS index score of up to 195 countries along with their *rank, overall change, region, population, and income.* From the homepage, users can also select a specific index category including *prevent, detect, respond, health, norms, risk* and search for any country as well.
+
+[World Health Organization](https://www.who.int/data), is an agency under the United Nations concerning international public health. Here, users can find data on many different topics including Covid-19, immunizations, mortality rates, and more in many different visual formats. Users can also narrow their search down by different regions, age, and many other ways.
+
+[Johns Hopkins Center for Health Security](https://www.centerforhealthsecurity.org/), is a nonprofit organization  created to help communities protect themselves from epidemics and pandemics. From their website, you can find many different projects relating to global health and other related topics including vaccination rates, bioeconomy, and more.
 
 ## What data-driven questions do you hope to answer about this domain (share **at least 3**)?
 - What region has the most countries with the lowest index scores?
