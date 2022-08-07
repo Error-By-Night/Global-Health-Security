@@ -1,0 +1,19 @@
+---
+title: "index"
+output: html_document
+date: "2022-08-07"
+date: "`r Sys.Date()`"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r load-packages, message=FALSE}
+library("dplyr")
+library("knitr")
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
