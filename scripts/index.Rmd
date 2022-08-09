@@ -14,6 +14,7 @@ source("scripts/summary_info.R")
 # Global Health Security Around the World
 
 ## Introduction
+With the world we live in today, global health security plays a big role in how countries are able to operate, all the way from the leader to the normal civilians. We are interested in how to make best use of open datasets to spread awareness of global health security so it can be improved and help public safety. Specifically we are hoping to visualize and identify countries with low security indexes to inform ourselves and eventually develop ways to help improve their benchmarks. To do so, we referred to the *GHS Index* which has been gathering data from 2019 till now, and is responsible for creating index scores for each couturiers health security.
 
 
 ## Summary Information
