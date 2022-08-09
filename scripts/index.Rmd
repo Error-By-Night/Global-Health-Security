@@ -33,7 +33,9 @@ parameters such as overall index score, prevention of the emergence or release o
 
 
 ## Table of Aggregated Data
-
+ ```{r table of GHS INDEX in 2019}
+ table
+ ```
 
 ## Charts
 
