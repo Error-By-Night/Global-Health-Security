@@ -1,0 +1,58 @@
+---
+title: "index"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+source("scripts/scatter_plot_index.R")
+source("scripts/top_10_scores_2019_piechart.R")
+source("scripts/top_10_scores_2021_barchart.R")
+source("scripts/summary_info.R")
+```
+
+# Global Health Security Around the World
+
+## Introduction
+
+
+## Summary Information
+```{r Summary}
+GHS_summary <- read_csv("GHS-Index.csv")
+
+summary <- summary_info(GHS_summary)
+summary$total_observations
+summary$lowest_Score
+summary$highest_Score
+summary$avg_Score_2021
+```
+
+The dataset that we had used consisted of many different countries around the world in every continent with specific
+parameters such as overall index score, prevention of the emergence or release of pathogens, laws involving containing pathogens/diseases, and more. The chosen dataset includes information from the years 2019 and 2021. In total, the GHS Index has calculated the scores of `r summary$total_observations` countries in the years 2019 and 2021, the country with the lowest score was `r summary$lowest_Score` with `r lowest_Score_S`, and the country with the highest score was `r summary$highest_Score` with `r summary$highest_Score_S`. The average index score in 2021 was `r summary$avg_Score_2021`. 
+
+
+## Table of Aggregated Data
+
+
+## Charts
+
+### Scatterplot
+```{r Scatterplot of Selected Countries in 2019}
+scatterplot
+```
+
+The scatterplot shows the dots of selected values in 2019 with each country's name written over the datapoint. The scatterplot here shows a wide range of numbers, indicating the contrasting indexes between countries. There also seems to be many countries clustered around each other as well depending on the continent they are in.
+
+### Pie Chart
+```{r Pie Chart of Top 10 Countries in 2019}
+piechart
+```
+
+The pie chart shows the Top 10 Countries in 2019 with the highest index scores. We can see that all of the top 10 countries fall within 10 points of each other. None of the countries stand out from the rest, it is more of a continuous line.
+
+### Bar Chart
+```{r Bar Chart of Top 10 Countries in 2021}
+barchart
+```
+
+The bar chart shows the Top 10 Countries with the highest scores in 2021. Each bar represents the score of the country itself. We can see that only 3 countries had a score over 70 and no country had a score above 80.
