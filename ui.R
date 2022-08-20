@@ -16,17 +16,20 @@ shinyUI(fluidPage(
       sidebarPanel(
       h3("Background: What is GHS"),
       p("Global health security is the existence of strong and resilient public 
-              health systems that can prevent, detect, and respond to infectious disease threats, 
-              wherever they occur in the world. Its main goal is to  to minimize the danger and impact of acute public health events 
-              that endanger people's health across geographical regions and international boundaries."),
-      p("With everything happening in our world today with Covid-19, global health security is extremely important,
-              especially for countries who don't have the money or resources to comabt it. Being perpared for events like this
-              can save millions of lives and benefit all of humanity. When doing this project we wanted to look deeper into this topic
-              so to do so we used the GHS Index which is a data source which assesses countriess health security and capabilies
-              across six categories and 37 indicators."),
+      health systems that can prevent, detect, and respond to infectious disease threats, 
+      wherever they occur in the world. Its main goal is to  to minimize the danger and impact 
+      of acute public health events that endanger people's health across geographical regions 
+      and international boundaries."),
+      p("With everything happening in our world today with Covid-19, global health security is 
+      extremely important, especially for countries who don't have the money or resources to 
+      comabt it. Being perpared for events like this can save millions of lives and benefit all 
+      of humanity. When doing this project we wanted to look deeper into this topic so to do so 
+      we used the GHS Index which is a data source which assesses countriess health security and 
+      capabilies across six categories and 37 indicators."),
       h3("Research Questions"),
-      p("-   What countries had the highest GHS Index Scores in both 2019 and 2021"),
-      p("-   What continents had higher GHS Scores"),
+      p("-   What countries had the highest GHS Index Scores in both 2019 and 2021?"),
+      p("-   What continents had higher GHS Scores?"),
+      p("-   How have the index scores of countries changed between 2019 and 2021?"),
       h3("About Us"),
       p("Authors: Aanyk Mann, Joey Kang"),
       p("INFO 201 - University of Washington"),
@@ -65,8 +68,8 @@ shinyUI(fluidPage(
     sidebarPanel(
       selectInput(
         inputId = "country",
-        label = h3("Select Country"),
-        choices = unique(GHS_row$Country)
+        label = h3("Select Year"),
+        choices = c("2019", "2021")
       )
     ),
     
@@ -79,25 +82,24 @@ shinyUI(fluidPage(
         have similar index scores despite their vastly different GDP levels")
     )
   )
-  ),
+),
   
   tabPanel("Top Index Scores in 2021", fluid = TRUE, sidebarLayout(
     sidebarPanel(
       selectInput(
         inputId = "country",
-        label = h3("Select Country"),
-        choices = unique(GHS_row$Country)
+        label = h3("Select Year"),
+        choices = c("2019", "2021")
       )
     ),
     
     mainPanel(
       plotlyOutput(outputId = "barchart"),
-      p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-      sunt in culpa qui officia deserunt mollit anim id est laborum.")
+      p("The bargraph shows a visualization of the countires with the top 10 index scores in 2021. 
+      Within the top 10 the countires index scores aren't that far apart with the United States 
+      having the best score by only 4.8 points from Australia. As seen from the piechart as well,
+      the United States has remained on top of the world with their GHS score however it did 
+      decline over that 2 year period.")
     )
   )
 ),
@@ -139,19 +141,24 @@ shinyUI(fluidPage(
           action towards future prevention of outbreaks which may lead to very
           large problems that we may not be able to solve. For example, the US
           score was 76.2 in 2019. In 2021, their score dropped to 75.9 which means
-          the US has gotten worse."),
+          the US has gotten worse. Also, looking at the bar chart, we can see that
+          there is an 11 point difference between the #1 country and #10 country, 
+          implying that there are not many countries with high index scores."),
         p("In addition, we found that the continents with the highest index scores 
           were in North America and Europe. As stated before, most of the countries
           within these continents are first world countries with high income and so
           it would be expected for them to have high scores. The continent with the
           most noticeable lowest scores is Africa. Not including South Africa, every 
           country in Africa seems to fall above the 100th ranking which mean they are
-          below the 50th percentile of countries.")
+          below the 50th percentile of countries. Based on our research and analysis 
+          of this data, it is clear that the implications of global health security, 
+          are extremely important and is something all countries should invest into, 
+          as we never know when another pandemic can strike again.")
       ),
       
       mainPanel(
         img(src = "https://www.irmi.com/images/default-source/article-images/workers-comp/doctor-holding-globe-with-medical-mask.jpg?sfvrsn=6",
-            width = "75%", height = "75%")
+            width = "85%", height = "85%")
         )
       )
     )

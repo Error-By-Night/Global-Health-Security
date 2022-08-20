@@ -4,6 +4,8 @@ library(plotly)
 # pass in dataset needed for pie chart chart
 top_10_scores_2019 <- read.csv("data/Top-10-GHS-Index-2019.csv")
 
+GHS_row_pie <- select(top_10_scores_2021, Year, Country, OVERALL.SCORE)
+
 # convert into a data frame
 scores2019 <- data.frame("Country"=rownames(top_10_scores_2019), top_10_scores_2019)
 data <- scores2019[,c('Country', 'OVERALL.SCORE')]
