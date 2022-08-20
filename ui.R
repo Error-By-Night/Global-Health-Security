@@ -72,12 +72,11 @@ shinyUI(fluidPage(
     
     mainPanel(
       plotlyOutput(outputId = "piechart"),
-      p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-      sunt in culpa qui officia deserunt mollit anim id est laborum.")
+      p("The piechart shows a diagram of the countries with the highest GHS Index scores in 2019 
+        with each country's name written over its respective slice. The piechart here shows a 
+        condensed range of numbers, indicating how among the top 10 countries, the discrepensies 
+        aren't that drastic. What is intresting is how countries like Thailand and the United Kingdom 
+        have similar index scores despite their vastly different GDP levels")
     )
   )
   ),
