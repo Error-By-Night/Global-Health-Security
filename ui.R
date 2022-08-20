@@ -25,19 +25,16 @@ shinyUI(fluidPage(
               so to do so we used the GHS Index which is a data source which assesses countriess health security and capabilies
               across six categories and 37 indicators."),
       h3("Research Questions"),
-      p("**What countries had the highest GHS Index Scores in both 2019 and 2021**"),
-      p("**What continents had higher GHS Scores**"),
+      p("-   What countries had the highest GHS Index Scores in both 2019 and 2021"),
+      p("-   What continents had higher GHS Scores"),
       h3("About Us"),
       p("Authors: Aanyk Mann, Joey Kang"),
       p("INFO 201 - University of Washington"),
     ),
     
     mainPanel(
-      img(src = "imgs/gshaseoul.png",
-          width = "95%", height = "95%"),
-      p(""),
-      img(src = "imgs/ghspic.jpg",
-          width = "95%", height = "95%"),
+      img(src = "https://www.cdc.gov/globalhealth/healthprotection/fieldupdates/2021/images/Uganda-burial-team-Kagando-Hospital-large.jpg?_=16046g",
+          width = "90%", height = "90%"),
     )
     )
   ),
@@ -118,7 +115,7 @@ shinyUI(fluidPage(
       
       mainPanel(
         img(src = "https://www.irmi.com/images/default-source/article-images/workers-comp/doctor-holding-globe-with-medical-mask.jpg?sfvrsn=6",
-            width = "65%", height = "65%")
+            width = "75%", height = "75%")
         )
       )
     )
