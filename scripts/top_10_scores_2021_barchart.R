@@ -12,3 +12,4 @@ barchart <- ggplot(top_10_scores_2021, aes(x = Country, y = OVERALL.SCORE)) +
     y = "Index Score",
     title = "Top 10 Countries by Index Score in 2021"
   )
+barchart
