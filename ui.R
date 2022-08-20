@@ -41,11 +41,6 @@ shinyUI(fluidPage(
     
   tabPanel("Table for GHS", fluid = TRUE, sidebarLayout(
         sidebarPanel(
-          checkboxGroupInput(
-            "year",
-            label = h3("Select Year"),
-            choices = list("2019 = 2019", "2021 = 2021")
-          ),
           radioButtons(
             "Overall Score",
             label = h3("Select GHS Score"),
@@ -76,7 +71,7 @@ shinyUI(fluidPage(
         ),
         
         mainPanel(
-            plotlyOutput(outputId = "GHS_scatterchart"),
+            plotlyOutput(outputId = "scatterplot"),
           p("The scatterplot shows the dots of selected values in 2019 with each country's name 
         written over the datapoint. The scatterplot here shows a wide range of numbers, 
         indicating the contrasting indexes between countries. There also seems to be many 
