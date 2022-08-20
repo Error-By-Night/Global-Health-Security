@@ -54,12 +54,54 @@ shinyUI(fluidPage(
               along with the year that the data was gathered. We extracted a random pool 
               of 20 countries to give an example of how drastic the difference of safety 
               can be within countries and even continents. The information displays how in
-              countries within Africa there is a much lower index score versus those in Europe or North America. "
-          )
+              countries within Africa there is a much lower index score versus those in 
+              Europe or North America.")
           )
         )
       )
     ),
+  
+  tabPanel("Top Index Scores in 2019", fluid = TRUE, sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "country",
+        label = h3("Select Country"),
+        choices = unique(GHS_row$Country)
+      )
+    ),
+    
+    mainPanel(
+      plotlyOutput(outputId = "piechart"),
+      p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est laborum.")
+    )
+  )
+  ),
+  
+  tabPanel("Top Index Scores in 2021", fluid = TRUE, sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        inputId = "country",
+        label = h3("Select Country"),
+        choices = unique(GHS_row$Country)
+      )
+    ),
+    
+    mainPanel(
+      plotlyOutput(outputId = "barchart"),
+      p("Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+      aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate 
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est laborum.")
+    )
+  )
+),
     
   tabPanel("Scatter Plot for GHS", fluid = TRUE, sidebarLayout(
         sidebarPanel(

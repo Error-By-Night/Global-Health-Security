@@ -3,6 +3,7 @@ library(plotly)
 
 # pass in dataset needed for bar chart
 top_10_scores_2021 <- read.csv("data/Top-10-GHS-Index-2021.csv")
+top_10_scores_2019 <- read.csv("data/Top-10-GHS-Index-2019.csv")
 
 # create a bar chart for the top 10 index scores in the year 2021
 barchart <- ggplot(top_10_scores_2021, aes(x = Country, y = OVERALL.SCORE)) +
@@ -13,4 +14,3 @@ barchart <- ggplot(top_10_scores_2021, aes(x = Country, y = OVERALL.SCORE)) +
     y = "Index Score",
     title = "Top 10 Countries by Index Score in 2021"
   )
-ggplotly(barchart)
