@@ -1,3 +1,5 @@
+Final Project Link: https://littlekangaroo.shinyapps.io/final-project-Error-By-Night/
+
 # Global Health Security | Info 201 Final Project
 ## Why are you interested in this field/domain?
 We are interested in the domain of global health security because as we are currently experiencing a pandemic, it is important for countries to be more readily prepared for other infectious disease outbreaks in the future. When the pandemic first started, Covid-19 had a large impact on the world both socially and economically. Many people in the workforce lost their jobs, borders closed, businesses closed, and much more. Here, we would like to visualize and identify countries with low security indexes to inform ourselves and eventually develop ways to help improve their benchmarks.
