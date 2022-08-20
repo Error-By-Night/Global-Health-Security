@@ -4,7 +4,7 @@ library(plotly)
 library(tidyverse)
 
 # define UI
-ui <- fluidPage(
+shinyUI(fluidPage(
   theme = shinytheme("darkly"),
   
   # project title
@@ -12,7 +12,8 @@ ui <- fluidPage(
   
   tabsetPanel(
     
-    introduction <- tabPanel("Introduction", sidebarPanel(
+    tabPanel("Introduction", fluid = TRUE, sidebarLayout(
+      sidebarPanel(
       h3("Background: What is GHS"),
       p("Global health security is the existence of strong and resilient public 
               health systems that can prevent, detect, and respond to infectious disease threats, 
@@ -24,44 +25,24 @@ ui <- fluidPage(
               so to do so we used the GHS Index which is a data source which assesses countriess health security and capabilies
               across six categories and 37 indicators."),
       h3("Research Questions"),
-      P("**What countries had the highest GHS Index Scores in both 2019 and 2021**"),
+      p("**What countries had the highest GHS Index Scores in both 2019 and 2021**"),
       p("**What continents had higher GHS Scores**"),
       h3("About Us"),
       p("Authors: Aanyk Mann, Joey Kang"),
       p("INFO 201 - University of Washington"),
-      
-      mainPanel(
-        img(src = "imgs/gshaseoul.png",
-            width = "95%", height = "95%"),
-        p(""),
-        img(src = "imgs/ghspic.jpg",
-            width = "95%", height = "95%"),
-      ),
-      
-      mainPanel(
-        plotlyOutput(outputId = "GHS_final"),
-        p(em("This table shows the global health index score of a pool of countries 
-              along with the year that the data was gathered. We extracted a random pool 
-              of 20 countries to give an example of how drastic the difference of safety 
-              can be within countries and even continents. The information displays how in
-              countries within Africa there is a much lower index score versus those in Europe or North America. "
-          )
-        )
-      ),
-      
-      mainPanel(
-        plotlyOutput(outputId = "GHS_scatterchart"),
-        p("The scatterplot shows the dots of selected values in 2019 with each country's name 
-        written over the datapoint. The scatterplot here shows a wide range of numbers, 
-        indicating the contrasting indexes between countries. There also seems to be many 
-        countries clustered around each other as well depending on the continent they are in.")
-        )
-      )
     ),
     
-    ghs_table <- tabPanel(
-      "Table for GHS",
-      sidebarLayout(
+    mainPanel(
+      img(src = "imgs/gshaseoul.png",
+          width = "95%", height = "95%"),
+      p(""),
+      img(src = "imgs/ghspic.jpg",
+          width = "95%", height = "95%"),
+    )
+    )
+  ),
+    
+  tabPanel("Table for GHS", fluid = TRUE, sidebarLayout(
         sidebarPanel(
           checkboxGroupInput(
             "year",
@@ -73,24 +54,41 @@ ui <- fluidPage(
             label = h3("Select GHS Score"),
             choices = unique(GHS_final$Overall.Score)
           )
+        ),
+        
+        mainPanel(
+          tableOutput(outputId = "GHS_final"),
+          p(em("This table shows the global health index score of a pool of countries 
+              along with the year that the data was gathered. We extracted a random pool 
+              of 20 countries to give an example of how drastic the difference of safety 
+              can be within countries and even continents. The information displays how in
+              countries within Africa there is a much lower index score versus those in Europe or North America. "
+          )
+          )
         )
       )
     ),
     
-    ghs_scatter_plot <- tabPanel(
-      "Scatter Plot for GHS",
-      sidebarLayout(
+  tabPanel("Scatter Plot for GHS", fluid = TRUE, sidebarLayout(
         sidebarPanel(
           selectInput(
             inputId = "country",
             label = h3("Select Country"),
             choices = unique(GHS_row$Country)
           )
+        ),
+        
+        mainPanel(
+            plotlyOutput(outputId = "GHS_scatterchart"),
+          p("The scatterplot shows the dots of selected values in 2019 with each country's name 
+        written over the datapoint. The scatterplot here shows a wide range of numbers, 
+        indicating the contrasting indexes between countries. There also seems to be many 
+        countries clustered around each other as well depending on the continent they are in.")
         )
       )
     ),
     
-    tabPanel("Conclusion", sidebarLayout(
+    tabPanel("Conclusion", fluid = TRUE, sidebarLayout(
       sidebarPanel(
         h3("Conclusion"),
         p("Looking at our analysis and insights drawn from our visualizations, 
@@ -120,11 +118,11 @@ ui <- fluidPage(
       
       mainPanel(
         img(src = "https://www.irmi.com/images/default-source/article-images/workers-comp/doctor-holding-globe-with-medical-mask.jpg?sfvrsn=6",
-            width = "95%", height = "95%")
-      )
+            width = "65%", height = "65%")
+        )
       )
     )
   )
 )
-
+)
 

@@ -1,7 +1,7 @@
 library("dplyr")
 library("tidyr")
 
-GHS <- read.csv("GHSindex.csv")
+GHS <- read.csv("data/GHS-Index.csv")
 
 names(GHS)
 names(GHS)[3] <- "Overall.Score"
